@@ -1,0 +1,4 @@
+# Bibliotecas usadas no Wokwi
+Adafruit GFX Library
+Adafruit SSD1306
+Adafruit BusIO

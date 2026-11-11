@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "author": "Equipe Guiding Hand",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "sonar",
+      "top": -210,
+      "left": -160,
+      "attrs": { "distance": "300" }
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled",
+      "top": -175,
+      "left": 125,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "vib_esq",
+      "top": 10,
+      "left": -190,
+      "attrs": { "color": "blue", "label": "Vib. esq." }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "vib_dir",
+      "top": 10,
+      "left": -120,
+      "attrs": { "color": "blue", "label": "Vib. dir." }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_esq",
+      "top": 110,
+      "left": -205,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_dir",
+      "top": 110,
+      "left": -135,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": 150,
+      "left": 175,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "botao",
+      "top": 60,
+      "left": 160,
+      "attrs": { "color": "green", "label": "Repetir / Ajuda" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "bateria",
+      "top": 250,
+      "left": 140,
+      "attrs": { "label": "Bateria" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+
+    [ "sonar:VCC", "esp:5V", "red", [] ],
+    [ "sonar:GND", "esp:GND.1", "black", [] ],
+    [ "sonar:TRIG", "esp:5", "green", [] ],
+    [ "sonar:ECHO", "esp:18", "blue", [] ],
+
+    [ "oled:VCC", "esp:3V3", "red", [] ],
+    [ "oled:GND", "esp:GND.2", "black", [] ],
+    [ "oled:SDA", "esp:21", "orange", [] ],
+    [ "oled:SCL", "esp:22", "purple", [] ],
+
+    [ "esp:25", "r_esq:2", "violet", [] ],
+    [ "r_esq:1", "vib_esq:A", "violet", [] ],
+    [ "vib_esq:C", "esp:GND.1", "black", [] ],
+
+    [ "esp:27", "r_dir:2", "violet", [] ],
+    [ "r_dir:1", "vib_dir:A", "violet", [] ],
+    [ "vib_dir:C", "esp:GND.1", "black", [] ],
+
+    [ "buzzer:2", "esp:14", "gold", [] ],
+    [ "buzzer:1", "esp:GND.2", "black", [] ],
+
+    [ "botao:1.l", "esp:13", "green", [] ],
+    [ "botao:2.l", "esp:GND.2", "black", [] ],
+
+    [ "bateria:VCC", "esp:3V3", "red", [] ],
+    [ "bateria:GND", "esp:GND.2", "black", [] ],
+    [ "bateria:SIG", "esp:34", "green", [] ]
+  ],
+  "dependencies": {}
+}
