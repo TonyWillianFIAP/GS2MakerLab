@@ -6,11 +6,13 @@
 
 ## Integrantes
 
-| Nome | RM |
-| João Rodrigo Solano Nogueira | 551319 |
-| Julia Amorim Bezerra | 99609 |
-| Lana Giulia Auada Leite | 551143 |
-| Tony Willian da Silva Segalin | 550667 |
+João Rodrigo Solano Nogueira | 551319
+
+Julia Amorim Bezerra | 99609
+
+Lana Giulia Auada Leite | 551143
+
+Tony Willian da Silva Segalin | 550667
 
 ## Vídeo demonstrativo
 
