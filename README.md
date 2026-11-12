@@ -1,7 +1,5 @@
 # Guiding Hand
 
-![Capa da apresentação do Guiding Hand](docs/apresentacao/slides/01.png)
-
 Óculos inteligentes que avisam pessoas cegas ou com baixa visão sobre obstáculos que a bengala não alcança e as guiam pela cidade por vibração e voz, com o celular guardado no bolso. Projeto do Project-Based Maker Lab, Global Solution 2026 CitizenTech, Engenharia de Software 4º ano da FIAP.
 
 ## Integrantes
